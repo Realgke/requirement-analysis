@@ -64,6 +64,62 @@ Non-Functional Requirements define the performance, reliability, security, and u
   - The system shall achieve 99.9% uptime to ensure reliability, critical for SRE monitoring and maintenance.
   - The system shall provide a user-friendly interface with intuitive navigation, accessible on both desktop and mobile devices.
 
+ ## Use Case Diagrams
+
+### Overview
+Use Case Diagrams are UML diagrams that visualize interactions between actors (users or external systems) and the system’s functionalities (use cases). They capture functional requirements, showing who uses the system and what actions they perform, aiding Requirement Analysis for the Booking Management System.
+
+### Benefits
+- **Clarifies Functionality**: Visualizes system features (e.g., booking properties) and user interactions, enhancing stakeholder communication.
+- **Validates Requirements**: Ensures all functional requirements, like user authentication and property search, are captured.
+- **Defines Scope**: Outlines the system’s boundaries, preventing scope creep.
+- **Guides Development and Testing**: Serves as a blueprint for designing features and creating test cases aligned with requirements.
+
+### Use Case Diagram for the Booking Management System
+This diagram represents the property booking system, enabling users to search, book, and manage properties while ensuring secure authentication and scalability for 1000 concurrent users.
+
+**Actors**:
+- **User**: Searches, books, and manages properties; registers and logs in.
+- **Administrator**: Manages property listings.
+- **Authentication System**: Handles secure login and registration.
+- **Payment Gateway**: Processes payments for bookings.
+
+**Use Cases**:
+- **Search Properties**: User searches properties by location, price, or availability.
+- **User Registration**: User creates an account with personal details and credentials.
+- **User Authentication**: User logs in securely (includes Authentication System).
+- **View Property Listings**: User views property details and images.
+- **Book Property**: User books a property and completes payment (includes Payment Gateway).
+- **Manage Bookings**: User views or modifies booking details (extends Book Property).
+- **Manage Property Listings**: Administrator adds, updates, or removes property listings.
+
+**Diagram**:
+![Booking Management System Use Case Diagram](alx-booking-uc.png)
+
+To create the diagram, use Draw.io to draw actors (User, Administrator, Authentication System, Payment Gateway) and use cases, connecting them with lines («include» for Authentication System and Payment Gateway; «extend» for Manage Bookings). Export as `alx-booking-uc.png` and place it in the same directory as this README.
+
+## Acceptance Criteria
+
+### Overview
+Acceptance Criteria are specific, measurable conditions that a feature or system must meet to be considered complete and acceptable by stakeholders. In Requirement Analysis, they define the scope and success criteria for features, ensuring alignment with user needs and project goals.
+
+### Importance in Requirement Analysis
+- **Clarifies Expectations**: Ensures stakeholders and developers agree on what constitutes a complete feature, reducing ambiguity.
+- **Guides Development**: Provides clear, testable goals for developers to implement features like the Checkout system.
+- **Facilitates Testing**: Serves as the basis for test cases, enabling verification of functionality and performance.
+- **Prevents Scope Creep**: Defines feature boundaries, avoiding unnecessary additions.
+- **Ensures User Satisfaction**: Validates that features meet user needs, enhancing system value.
+
+### Example: Acceptance Criteria for the Checkout Feature
+The Checkout feature in the Booking Management System allows users to finalize property bookings by selecting a property and completing payment. Below are acceptance criteria reflecting functional (booking system) and non-functional (performance, security, usability) requirements.
+
+- **Given** a logged-in user has selected a property with available dates, **when** they initiate checkout, **then** the system displays a checkout page with property details, selected dates, total price, and payment options (e.g., mobile money, credit card).
+- **Given** a user is on the checkout page, **when** they enter valid payment details and confirm the booking, **then** the system processes the payment securely via the Payment Gateway and completes the booking within 2 seconds.
+- **Given** a user completes a successful checkout, **then** the system sends a confirmation email or SMS with booking details and a unique booking ID within 5 seconds.
+- **Given** a user enters invalid payment details during checkout, **when** they attempt to confirm the booking, **then** the system displays a clear error message (e.g., “Invalid card number”) without processing the payment.
+- **Given** a user is on the checkout page, **when** 1000 concurrent users initiate checkout, **then** the system processes all requests without crashing, maintaining 99.9% uptime.
+- **Given** a user accesses the checkout page, **when** they navigate using a mobile or desktop device, **then** the interface is intuitive, responsive, and accessible, with all elements visible and functional.
+
 
 
 
