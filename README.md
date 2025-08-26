@@ -94,9 +94,7 @@ This diagram represents the property booking system, enabling users to search, b
 - **Manage Property Listings**: Administrator adds, updates, or removes property listings.
 
 **Diagram**:
-![Booking Management System Use Case Diagram](alx-booking-uc.png)
-
-To create the diagram, use Draw.io to draw actors (User, Administrator, Authentication System, Payment Gateway) and use cases, connecting them with lines («include» for Authentication System and Payment Gateway; «extend» for Manage Bookings). Export as `alx-booking-uc.png` and place it in the same directory as this README.
+alx-booking-uc.png
 
 ## Acceptance Criteria
 
