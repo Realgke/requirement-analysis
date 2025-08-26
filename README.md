@@ -36,6 +36,34 @@ Provides a Foundation for Development, Testing, and Maintenance:It creates a cle
   - Uses reviews, prototypes, or feedback sessions to validate, e.g., ensuring a DeFi app’s requirements meet user expectations for transaction processing.
   - Prevents costly rework by verifying requirements before development begins.
 
+## Types of Requirements
+
+In the context of a Booking Management System (e.g., for hotel reservations or event ticketing), requirements are categorized into Functional and Non-Functional Requirements. These define what the system does and how it performs, ensuring alignment with stakeholder needs and project goals.
+
+### Functional Requirements
+
+Functional Requirements specify the specific features, behaviors, or functionalities the system must provide to meet user and business needs.
+
+- **Definition**: Describe the actions, inputs, outputs, and interactions the system must support, focusing on what the system should do.
+- **Examples**:
+  - The system shall allow users to search for available bookings by date, location, and type (e.g., hotel room, event ticket).
+  - The system shall enable users to create a booking by selecting an available slot and entering payment details.
+  - The system shall generate a confirmation email with booking details upon successful reservation.
+  - The system shall allow administrators to cancel or modify bookings based on user requests or availability changes.
+  - The system shall support exporting booking data to a CSV file for analysis, e.g., using a Bash pipeline like `cat bookings.log | grep 'confirmed' | sort | uniq -c`.
+
+### Non-Functional Requirements
+
+Non-Functional Requirements define the performance, reliability, security, and usability criteria that ensure the system operates effectively and meets quality standards.
+
+- **Definition**: Specify the constraints and quality attributes of the system, such as speed, scalability, security, or user experience, focusing on how the system performs.
+- **Examples**:
+  - The system shall process booking searches in under 2 seconds to ensure a responsive user experience.
+  - The system shall handle up to 10,000 concurrent users during peak booking periods to support scalability.
+  - The system shall encrypt all payment transactions using HTTPS and comply with PCI-DSS standards for security.
+  - The system shall achieve 99.9% uptime to ensure reliability, critical for SRE monitoring and maintenance.
+  - The system shall provide a user-friendly interface with intuitive navigation, accessible on both desktop and mobile devices.
+
 
 
 
